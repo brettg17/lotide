@@ -1,4 +1,3 @@
-
 const assertEqual = function(actual, expected) {
 
   if (actual === expected) {
@@ -6,10 +5,14 @@ const assertEqual = function(actual, expected) {
   } else if (actual !== expected) {
     console.log(`🛑🛑🛑Assertion failed: ${actual} !== ${expected}`);
   }
-  return actual + expected;
+};
 
+const tail = function(arr) {
+  return arr.slice(1);
 };
 
 //TEST CODE
-console.assert(assertEqual("Lighthouse Labs", "Bootcamp"));
-console.assert(assertEqual(1, 1));
+assertEqual(tail(["Lighthouse Labs", "Bootcamp"]).toString(), ["Bootcamp"].toString());
+assertEqual(tail([7, 6, 5, 6, 23]).toString(), [6, 5, 6, 23].toString());
+assertEqual(tail([5, 6, 7]).toString(), [6, 7].toString());
+assertEqual(tail([5, 6, 7]).toString(), [6].toString());
