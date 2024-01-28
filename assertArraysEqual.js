@@ -14,10 +14,10 @@ const eqArrays = function (arrayOne, arrayTwo) {
   return true;
 }
 
-const assertArraysEqual = function (expected, actual) {
+const assertArraysEqual = function (actual, expected) {
   if(eqArrays(actual, expected)){
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else if (eqArrays(arrays, expected)) {
+  } else {
     console.log(`🛑🛑🛑Assertion failed: ${actual} !== ${expected}`);
 
   }
