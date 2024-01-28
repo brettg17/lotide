@@ -34,9 +34,21 @@ const assertArraysEqual = function (actual, expected) {
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`🛑🛑🛑Assertion failed: ${actual} !== ${expected}`);
+  }
+}
 
+const without = function (source, itemsToRemove) {
+  let newArray = [];
+
+  for (let i of source) {
+    if (!itemsToRemove.includes(i)) {
+      newArray.push(i);
+    }
   }
 
+  return newArray
+
 }
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-assertArraysEqual([1, 2, 3], [1, 2, 5, 3]); // => false
+
+assertArraysEqual(without([1, 2, 3], [1])); // => [2,3]
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
