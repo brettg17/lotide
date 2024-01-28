@@ -1,4 +1,4 @@
-// check if elements are same length. return false if not/
+// check if elements are same length. return false if not
 const eqArrays = function (arrayOne, arrayTwo) {
   if (arrayOne.length !== arrayTwo.length) {
     return false;
@@ -12,6 +12,11 @@ const eqArrays = function (arrayOne, arrayTwo) {
   }
 // else: returns true
   return true;
+}
+
+const assertArraysEqual = function (expected, actual) {
+  
+
 }
 console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
 console.log(eqArrays([1, 2, 3], [1, 2, 5, 3])); // => false
