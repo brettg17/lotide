@@ -21,7 +21,7 @@ const eqArrays = function (arrayOne, arrayTwo) {
   }
 // else: returns true
   return true;
-}
+};
 
 
 //uses eqArrays function to iterate through array and then takes own arguments and displays
@@ -34,7 +34,12 @@ const assertArraysEqual = function (actual, expected) {
 
   }
 
-}
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-assertArraysEqual([1, 2, 3], [1, 2, 5, 3]); // => false
+};
 
+const flatten = function(arr){
+
+  return arr.flat();
+};
+
+const flatArray = flatten([1, [2, 3][4, [5, 6]]]);
+console.log(flatArray);
