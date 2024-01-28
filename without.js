@@ -37,9 +37,12 @@ const assertArraysEqual = function (actual, expected) {
   }
 }
 
+//creates without function: comapres 1st array with 2nd. whatever elements that are 
+//in 1st array but are not in 2nd will be pushed into a new array called newArray.
 const without = function (source, itemsToRemove) {
   let newArray = [];
 
+// iterates through source. if item is not in itemsToRemove. it gets pushed to newArray
   for (let i of source) {
     if (!itemsToRemove.includes(i)) {
       newArray.push(i);
