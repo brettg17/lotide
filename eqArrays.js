@@ -14,10 +14,23 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑Assertion failed: ${actual} !== ${expected}`);
   }
   return actual + expected;
-
 };
 
+const eqArrays = function (arrayOne, arrayTwo) {
+  if (arrayOne === arrayTwo) {
+    return true;
+  }
+
+  else {
+    false;
+  }
+}
+console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
+console.log(eqArrays([1, 2, 3], [1, 2, 5])); // => false
+
+
+
 //TEST CODE
-console.assert(assertEqual("Lighthouse Labs", "Bootcamp"));
-console.assert(assertEqual(1, 1));
+//console.assert(assertEqual("Lighthouse Labs", "Bootcamp"));
+//console.assert(assertEqual(1, 1));
 
