@@ -23,5 +23,5 @@ const assertArraysEqual = function (expected, actual) {
   }
 
 }
-console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
-console.log(eqArrays([1, 2, 3], [1, 2, 5, 3])); // => false
+assertArraysEqual([1, 2, 3], [1, 2, 3], true); // => true
+assertArraysEqual([1, 2, 3], [1, 2, 5, 3], true); // => false
