@@ -15,7 +15,12 @@ const eqArrays = function (arrayOne, arrayTwo) {
 }
 
 const assertArraysEqual = function (expected, actual) {
-  
+  if(eqArrays[1] = eqArrays[2]) {
+    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
+  } else if (eqArrays[1] = eqArrays[2]) {
+    console.log(`🛑🛑🛑Assertion failed: ${actual} !== ${expected}`);
+
+  }
 
 }
 console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
