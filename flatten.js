@@ -37,9 +37,8 @@ const assertArraysEqual = function (actual, expected) {
 };
 
 const flatten = function(arr){
-
   return arr.flat();
 };
 
 const flatArray = flatten([1, [2, 3][4, [5, 6]]]);
-console.log(flatArray);
+assertArraysEqual(flatArray, [1, 2, 3, 4, 5, 6]);
