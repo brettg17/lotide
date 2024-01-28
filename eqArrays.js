@@ -1,8 +1,8 @@
 /*
 To do:
-- copy source fil and paste to the top of eqArrays.js.
+- copy source file and paste to the top of eqArrays.js.
 - implement fucntion eqArrays.js. 
-  - takes twoa rrays and returns true or false
+  - takes two arrays and returns true or false
   - use assertEqual to write test cases for various scenarios
 */
 
@@ -10,8 +10,6 @@ To do:
 // function to see if the ouput is the same as expected.
 // assertion passed: if true == true and false == false
 //assertion failed: if true != true and false != false
-
-
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
