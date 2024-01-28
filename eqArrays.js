@@ -6,6 +6,12 @@ To do:
   - use assertEqual to write test cases for various scenarios
 */
 
+
+// function to see if the ouput is the same as expected.
+// assertion passed: if true == true and false == false
+//assertion failed: if true != true and false != false
+
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
@@ -15,18 +21,19 @@ const assertEqual = function(actual, expected) {
   return actual + expected;
 };
 
-// check if elements are same length
+// check if elements are same length. return false if not/
 const eqArrays = function (arrayOne, arrayTwo) {
   if (arrayOne.length !== arrayTwo.length) {
     return false;
     }
 
+  //iteratre through each character of an array. return false if each element is not identical.
   for (let i = 0; i < arrayOne.length; i++) {
     if (arrayOne[i] !== arrayTwo[i]) {
       return false;
     }
   }
-
+// else: returns true
   return true;
 }
 console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
