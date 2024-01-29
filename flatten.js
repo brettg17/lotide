@@ -41,7 +41,7 @@ const flatten = function(arr){
   for (let i of arr) {
     if (Array.isArray(i)) {
       for (let inner of i) {
-        flattenedArray.push(innerElement);
+        flattenedArray.push(inner);
       }
     } else {
       return flattenedArray;
