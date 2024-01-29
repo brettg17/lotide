@@ -1,4 +1,11 @@
-
+/*
+to do:
+- create function called middle
+  - take array and return middle most element
+  - if only one element or two elements return empty array
+  - odd number of elements return single middle element
+  - even arrays (4 or more) return the two middle elements
+*/
 
 
 
@@ -31,5 +38,11 @@ const assertArraysEqual = function (actual, expected) {
   }
 
 }
+
+const middle = function(array) {
+
+}
+
+
 assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
 assertArraysEqual([1, 2, 3], [1, 2, 5, 3]); // => false
