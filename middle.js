@@ -40,9 +40,21 @@ const assertArraysEqual = function (actual, expected) {
 }
 
 const middle = function(array) {
+  const length = array.length;
+  if (length <= 2) {
+    return;
+  } else if (length % 2 === 1){
+    const middle = Math.floor(length / 2);
+    return [array[middle]];
+  } else {
+    const middleOne = length / 2 - 1;
+    const middleTwo = length / 2
+    return [array[middleOne], array[middleTwo]];
+  }
+};
 
-}
 
-
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-assertArraysEqual([1, 2, 3], [1, 2, 5, 3]); // => false
+assertArraysEqual(middle([1]), []);
+assertArraysEqual(middle([1, 2]), []);
+assertArraysEqual(middle([1, 2, 3]), [2]);
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
