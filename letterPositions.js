@@ -11,3 +11,16 @@ to do:
 - push work and mark activity compelete
 */
 
+const letterPositions = function(sentence) {
+  const results = {};
+  // logic to upate results here
+
+  return results;
+
+}
+
+
+const obj = {
+  letter: []
+}
+
