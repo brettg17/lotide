@@ -25,7 +25,6 @@ const countLetters = function(chars) {
       if (chars[i] === chars[j]) {
         total++;
       }
-
     }
     if (total > 0) {
       results[chars[i]] = total;
@@ -34,13 +33,13 @@ const countLetters = function(chars) {
   return results;
 };
 
-const testString = countLeters("lighthouse");
-assertEqual(result["l"], 1);
-assertEqual(result["i"], 1);
-assertEqual(result["g"], 1);
-assertEqual(result["h"], 2);
-assertEqual(result["t"], 1);
-assertEqual(result["o"], 1);
-assertEqual(result["u"], 1);
-assertEqual(result["s"], 1);
-assertEqual(result["e"], 1);
+const string = countLetters("lighthouse");
+assertEqual(string["l"], 1);
+assertEqual(string["i"], 1);
+assertEqual(string["g"], 1);
+assertEqual(string["h"], 2);
+assertEqual(string["t"], 1);
+assertEqual(string["o"], 3);
+assertEqual(string["u"], 1);
+assertEqual(string["s"], 4);
+assertEqual(string["e"], 1);
