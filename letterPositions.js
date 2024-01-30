@@ -4,8 +4,6 @@ to do:
 - step 1: define objecct structure to return
 - step 2: write a test
   - copy in assertArraysEqual and eqArrays function into file
-  - write a test with a small string ex: hello
-  - use assertArraysEqual to compare the 4 letters and their expected positions
 - step 3: implement the function
   - implement the logic of the function
 - push work and mark activity compelete
@@ -25,11 +23,8 @@ const letterPositions = function(sentence) {
     }
     
   }
-
   return results;
-
 }
-
 
 const eqArrays = function (arrayOne, arrayTwo) {
   if (arrayOne.length !== arrayTwo.length) {
@@ -58,14 +53,18 @@ const assertArraysEqual = function (actual, expected) {
   }
 
 }
+
 const obj = letterPositions("lighthouse in the house");
 assertArraysEqual(obj["l"], [0])
 assertArraysEqual(obj["i"], [1, 11])
 assertArraysEqual(obj["g"], [2])
 assertArraysEqual(obj["h"], [3, 5, 15, 18])
-assertArraysEqual(obj["t"], [4, 14])
-assertArraysEqual(obj["0"], [6, 19])
+assertArraysEqual(obj["t"], [4, 7])
+assertArraysEqual(obj["o"], [6, 19])
 assertArraysEqual(obj["u"], [7, 20])
 assertArraysEqual(obj["s"], [8, 21])
 assertArraysEqual(obj["e"], [9, 16, 22])
 assertArraysEqual(obj["n"], [12])
+
+
+
