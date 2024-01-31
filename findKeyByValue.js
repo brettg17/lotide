@@ -1,3 +1,13 @@
+/*
+To do: 
+Import asserEqual function for testing
+create assertEqual function
+take value and compare it to key
+if a match: Assertion Passed
+if value not in object: return undefined
+*/
+
+
 const assertEqual = function(actual, expected) {
 
   if (actual === expected) {
@@ -5,13 +15,17 @@ const assertEqual = function(actual, expected) {
   } else if (actual !== expected) {
     console.log(`🛑🛑🛑Assertion failed: ${actual} !== ${expected}`);
   }
-  return actual + expected;
 
 };
 
 
-const findKeyByValue = function(genre, show){
-
+const findKeyByValue = function(genre, show){ // create function that takes in two arguments
+  for (const key in genre) { //loop through 1st argument
+    if (show === genre[key]) { //if value matches the key
+      return key; // return the key
+    }
+  }
+  return undefined; //if value does not match the key return undefined
 }
 
 const bestTVShowsByGenre = {
@@ -20,6 +34,7 @@ const bestTVShowsByGenre = {
   drama: "The Wire"
 };
 
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That 70's Show"), undefined);
 
 
-console.log()
