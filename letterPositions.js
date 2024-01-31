@@ -9,17 +9,17 @@ to do:
 - push work and mark activity compelete
 */
 
-const letterPositions = function(sentence) {
-  const results = {};
+const letterPositions = function(sentence) { //create letterPositions function
+  const results = {}; //create empty object called results
   // logic to upate results here
-  for (let i = 0; i < sentence.length; i++) {
-    let total = sentence[i];
-    if (total !== ' ') {
-      if(!results[total]) {
-        results[total] = [];
+  for (let i = 0; i < sentence.length; i++) { // iterate through sentence
+    let total = sentence[i]; // store character in variable total
+    if (total !== ' ') { //if character is not a space
+      if(!results[total]) { // if not a key in results object
+        results[total] = []; // create and empty array as the value for that character key in the results object
       }
 
-      results[total].push(i)
+      results[total].push(i) // push position of character into array associated with character key
     }
     
   }
