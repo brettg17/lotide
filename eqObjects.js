@@ -5,8 +5,6 @@ const assertEqual = function(actual, expected) {
   } else if (actual !== expected) {
     console.log(`🛑🛑🛑Assertion failed: ${actual} !== ${expected}`);
   }
-  return actual + expected;
-
 };
 
 //returns true if both objects have identical keys with identical values.
@@ -17,11 +15,8 @@ const eqObjects = function(object1, object2) {
     return false;
   }
   for (const key in object1){
-    if (!key in object2){
+    if (!(key in object2) || object1[key] !== object2[key]){
       return false;
-    }
-    if(object1[key] == object2[key]){
-      return true;
     }
   }
   return true;
@@ -34,4 +29,4 @@ assertEqual(eqObjects(shirtObject, anotherShirtObject), true); // => true
 
 const longSleeveShirtObject = {size: "medium", color:"red", sleeveLength: "long"};
 eqObjects(shirtObject , longSleeveShirtObject);
-assertEqual(eqObjects(shirtObject, anotherShirtObject), false); // => false
+assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false); // => false
