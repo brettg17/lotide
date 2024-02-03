@@ -20,8 +20,6 @@ const assertEqual = function(actual, expected) {
   } else if (actual !== expected) {
     console.log(`🛑🛑🛑Assertion failed: ${actual} !== ${expected}`);
   }
-  return actual + expected;
-
 };
 
 //returns true if both objects have identical keys with identical values.
@@ -34,13 +32,13 @@ const eqObjects = function(object1, object2) {
   }
 
   for (const key of object1Keys) {
-    if(Array.isArray(object1[key] !== Array.isArray(object2[key]))) {  // Checks if there is an array in both objects. Returns false if not.
-      if(eqArrays(!object1[key], object2[key])) { // Checks if the two arrays are equal. Returns false if not.
+    if(Array.isArray(object1[key] && Array.isArray(object2[key]))) {  // Checks if there is an array in both objects. Returns false if not.
+      if(!eqArrays(object1[key], object2[key])) { // Checks if the two arrays are equal. Returns false if not.
       return false;
     }
   } else { 
-      if (object1[key] === object2[key]) { // Checks if values are equal. Returns true if they are.
-        return true;
+      if (object1[key] !== object2[key]) { // Checks if values are equal. Returns true if they are.
+        return false;
       }
     }
   }
