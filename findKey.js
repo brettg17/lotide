@@ -7,15 +7,15 @@ const assertEqual = function(actual, expected) {
   }
 
 };
-// take obj and callback as arguments. scans object and returns key when 
+// take obj and callback as arguments. scans object and returns key when
 //truthy condition is met. if no key is found. return undefined.
-const findKey = function (obj, callback) {
+const findKey = function(obj, callback) {
   for (const key in obj) { //iterate through object
-    if (callback(obj[key])){ // calls callback with obj[key] argument, checks truthy.
+    if (callback(obj[key])) { // calls callback with obj[key] argument, checks truthy.
       return key; //return the object key if condition is met.
     }
   }
-  return undefined// return undefined if condition is not met.
+  return undefined;// return undefined if condition is not met.
 
 };
 
@@ -35,9 +35,9 @@ console.log(results);
 const results2 = findKey(object1, x => x.stars > 5); // => undefined
 console.log(results2);
 
-assertEqual(results, "noma")
-assertEqual(results2, undefined)
-assertEqual(results, "nemo")
-assertEqual(results2, "Akaleri")
+assertEqual(results, "noma");
+assertEqual(results2, undefined);
+assertEqual(results, "nemo");
+assertEqual(results2, "Akaleri");
 
 
