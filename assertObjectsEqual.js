@@ -24,7 +24,10 @@ const eqObjects = function(object1, object2) {
 
 const assertObjectEqual = function(actual, expected) {
   const inspect = require('util').inspect;
-  if (actual, expected){
+  const actualKey = Object.keys(actual);
+  const expectedKey = Object.keys(expected);
+
+  if (actualKey.length === expectedKey.length){
     console.log(`✅✅✅Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
   } else {
     console.log(`🛑🛑🛑Assertion failed: ${inspect(actual)} !== ${inspect(expected)}`);
