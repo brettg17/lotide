@@ -22,16 +22,21 @@ const eqObjects = function(object1, object2) {
 };
 
 
-const assertObjectEqual = function(actual, expected) {
-  const inspect = require('util').inspect;
-  const actualKey = Object.keys(actual);
+const assertObjectEqual = function(actual, expected) { //test case for checking if objects are equal and dispaly objects
+  const inspect = require('util').inspect; // module to display objects
+  const actualKey = Object.keys(actual); //keys for actual and expected objects.
   const expectedKey = Object.keys(expected);
 
-  if (actualKey.length === expectedKey.length){
-    console.log(`✅✅✅Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion failed: ${inspect(actual)} !== ${inspect(expected)}`);
+  if (actualKey.length === expectedKey.length){ //Checks if the lengths of the two objects are equal
+    for (const key of actualKey) { //iterate through keys of the objects
+      if (actual[key] === expected[key]) { // checks if values are equal.
+        console.log(`✅✅✅Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+        return;
+      } 
+    }
   }
+
+  console.log(`🛑🛑🛑Assertion failed: ${inspect(actual)} !== ${inspect(expected)}`);
 };
 
 const shirtObject = { color: "red", size: "medium" };
