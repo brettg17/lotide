@@ -8,11 +8,11 @@ const eqObjects = function(object1, object2) {
   }
 
   for (const key of object1Keys) {
-    if(Array.isArray(object1[key]) && Array.isArray(object2[key])) {  // Checks if there is an array in both objects. Returns false if not.
-      if(!eqArrays(object1[key], object2[key])) { // Checks if the two arrays are equal. Returns false if not.
-      return false;
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {  // Checks if there is an array in both objects. Returns false if not.
+      if (!eqArrays(object1[key], object2[key])) { // Checks if the two arrays are equal. Returns false if not.
+        return false;
       }
-    } else { 
+    } else {
       if (object1[key] !== object2[key]) { // Checks if values are equal. Returns true if they are.
         return false;
       }
@@ -27,12 +27,12 @@ const assertObjectEqual = function(actual, expected) { //test case for checking 
   const actualKey = Object.keys(actual); //keys for actual and expected objects.
   const expectedKey = Object.keys(expected);
 
-  if (actualKey.length === expectedKey.length){ //Checks if the lengths of the two objects are equal
+  if (actualKey.length === expectedKey.length) { //Checks if the lengths of the two objects are equal
     for (const key of actualKey) { //iterate through keys of the objects
       if (actual[key] === expected[key]) { // checks if values are equal.
         console.log(`✅✅✅Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
         return;
-      } 
+      }
     }
   }
 
@@ -40,11 +40,11 @@ const assertObjectEqual = function(actual, expected) { //test case for checking 
 };
 
 const shirtObject = { color: "red", size: "medium" };
-const anotherShirtObject= { size: "medium", color: "red"};
+const anotherShirtObject = { size: "medium", color: "red"};
 eqObjects(shirtObject , anotherShirtObject); // => true
 assertObjectEqual(shirtObject, anotherShirtObject);
 
 
-const longSleeveShirtObject= { size: "medium", color: "red", sleeveLength: "long" };
+const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
 eqObjects(shirtObject , longSleeveShirtObject); // => false
 assertObjectEqual(shirtObject, longSleeveShirtObject);
