@@ -10,34 +10,6 @@ to do:
 
 
 
-// check if elements are same length. return false if not
-const eqArrays = function (arrayOne, arrayTwo) {
-  if (arrayOne.length !== arrayTwo.length) {
-    return false;
-    }
-
-  //iteratre through each character of an array. return false if each element is not identical.
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] !== arrayTwo[i]) {
-      return false;
-    }
-  }
-// else: returns true
-  return true;
-}
-
-
-//uses eqArrays function to iterate through array and then takes own arguments and displays
-//whether assertion has passed or failed.
-const assertArraysEqual = function (actual, expected) {
-  if(eqArrays(actual, expected)){
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion failed: ${actual} !== ${expected}`);
-
-  }
-
-}
 
 const middle = function(array) {
   const length = array.length;
@@ -54,8 +26,4 @@ const middle = function(array) {
 };
 
 
-assertArraysEqual(middle([1]), []);
-assertArraysEqual(middle([1, 2]), []);
-assertArraysEqual(middle([1, 2, 3]), [2]);
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
-assertArraysEqual(middle([1, 2, 10, 12, 17, 45, 67, 3, 4]), [17]);
+module.exports = middle;
