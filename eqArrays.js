@@ -6,19 +6,6 @@ To do:
   - use assertEqual to write test cases for various scenarios
 */
 
-
-// function to see if the ouput is the same as expected.
-// assertion passed: if true == true and false == false
-//assertion failed: if true != true and false != false
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`🛑🛑🛑Assertion failed: ${actual} !== ${expected}`);
-  }
-  return actual + expected;
-};
-
 // check if elements are same length. return false if not/
 const eqArrays = function (arrayOne, arrayTwo) {
   if (arrayOne.length !== arrayTwo.length) {
@@ -34,15 +21,5 @@ const eqArrays = function (arrayOne, arrayTwo) {
 // else: returns true
   return true;
 }
-console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
-console.log(eqArrays([1, 2, 3], [1, 2, 5, 3])); // => false
 
-
-
-//Tester Code:
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should Pass
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 5]), false); // => should pass
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 5]), true); // => should fail
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), false); // => should fail
-assertEqual(eqArrays(["test","this"], ["test", "this"]), true); // => what will a string do?????
-
+module.exports = eqArrays;
