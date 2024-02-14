@@ -8,7 +8,7 @@ describe('#tail', () =>{
   });
 
   it("returns '6, 5, 6, 23' for [7, 6, 5, 6, 23]", () => {
-    assert.deepEqual(tail(['Lighthouse Labs', 'Bootcamp']), ['Bootcamp']);
+    assert.deepEqual(tail([7, 6, 5, 6, 23]), [6, 5, 6, 23]);
   });
 });
 
