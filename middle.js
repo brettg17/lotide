@@ -11,7 +11,7 @@ const middle = function(array) {
   const middle = Math.floor(arrLength / 2);
   const middleTwo = arrLength / 2 - 1;
 
-  if (arrLength % 2 === 1) {
+  if (arrLength % 2 === 1 && arrLength > 2) {
     return [array[middle]];
   }
   else if(arrLength <= 2) {
@@ -22,6 +22,6 @@ const middle = function(array) {
   }
 
   }
-console.log(middle([1, 2, 3, 4, 5, 4]))
+console.log(middle([1, 2, 3]))
 
 module.exports = middle;
