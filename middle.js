@@ -6,24 +6,22 @@ to do:
   - odd number of elements return single middle element
   - even arrays (4 or more) return the two middle elements
 */
-
-
-
-
-
 const middle = function(array) {
-  const length = array.length;
-  if (length <= 2) {
-    return [];
-  } else if (length % 2 === 1){
-    const middle = Math.floor(length / 2);
-    return [array[middle]];
-  } else {
-    const middleOne = length / 2 - 1;
-    const middleTwo = length / 2
-    return [array[middleOne], array[middleTwo]];
-  }
-};
+  let arrLength = array.length
+  const middle = Math.floor(arrLength / 2);
+  const middleTwo = arrLength / 2 - 1;
 
+  if (arrLength % 2 === 1) {
+    return [array[middle]];
+  }
+  else if(arrLength <= 2) {
+    return [];
+  }
+  else {
+    return [array[middleTwo], array[middle]];
+  }
+
+  }
+console.log(middle([1, 2, 3, 4, 5, 4]))
 
 module.exports = middle;
