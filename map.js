@@ -57,4 +57,4 @@ const double = number=>number* 2;
 const result = map(numbers, double);
 assertArraysEqual(result, expected);
 
-
+module.exports = map;
