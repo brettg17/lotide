@@ -17,17 +17,17 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = function(chars) {
-  const results = {};
+  const results = {}; // create empty object
 
-  for (let i = 0; i < chars.length; i++) {
-    let total = 0;
-    for (let j = 0; j < chars.length; j++) {
+  for (let i = 0; i < chars.length; i++) { //iterate through each character in array.
+    let total = 0; 
+    for (let j = 0; j < chars.length; j++) { // iterate through array again to count occurances of current character
       if (chars[i] === chars[j]) {
-        total++;
+        total++; // if current character matches the character at index j add total count
       }
     }
-    if (total > 0) {
-      results[chars[i]] = total;
+    if (total > 0) { //if total count of the current charactrer is greater than 0 
+      results[chars[i]] = total;// Add an entry to results object. Current character is the key and its total count is the value
     }
   }
   return results;
@@ -43,3 +43,5 @@ assertEqual(string["o"], 3);
 assertEqual(string["u"], 1);
 assertEqual(string["s"], 4);
 assertEqual(string["e"], 1);
+
+module.exports = countLetters;
