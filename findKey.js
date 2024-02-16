@@ -41,3 +41,4 @@ assertEqual(results, "nemo");
 assertEqual(results2, "Akaleri");
 
 
+module.exports = findKey;
