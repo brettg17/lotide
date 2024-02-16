@@ -13,7 +13,7 @@ const eqObjects = function(object1, object2) {
         return false;
       }
     } else {
-      if (object1[key] !== object2[key]) { // Checks if values are equal. Returns true if they are.
+      if (object1[key] !== object2[key]) { // Checks if values are not equal. Returns false if they are not.
         return false;
       }
     }
@@ -48,3 +48,5 @@ assertObjectEqual(shirtObject, anotherShirtObject);
 const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
 eqObjects(shirtObject , longSleeveShirtObject); // => false
 assertObjectEqual(shirtObject, longSleeveShirtObject);
+
+module.exports = assertObjectsEqual;
