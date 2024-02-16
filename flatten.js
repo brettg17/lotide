@@ -39,9 +39,9 @@ const assertArraysEqual = function (actual, expected) {
 const flatten = function(arr){
   let flattenedArray = [];
   for (let i of arr) {
-    if (Array.isArray(i)) {
+    if (Array.isArray(i)) { //check if current element (i) is an array
       for (let inner of i) {
-        flattenedArray.push(inner);
+        flattenedArray.push(inner); //push each inner element to flattenedArray
       }
     } else {
       return flattenedArray;
@@ -51,3 +51,5 @@ const flatten = function(arr){
 };
 const flattenedArray = flatten([1, [2, 3], [4, [5, 6]]]);
 assertArraysEqual(flattenedArray, [1, 2, 3, 4, 5, 6]);
+
+module.exports = flatten;
