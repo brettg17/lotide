@@ -68,3 +68,4 @@ assertArraysEqual(obj["n"], [12])
 
 
 
+module.exports = letterPositions;
