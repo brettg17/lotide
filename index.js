@@ -11,7 +11,7 @@ const flatten= require('./flatten');
 const letterPositions= require('./letterPositions');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
-const map = require('../map');
+const map = require('./map');
 
 module.exports = {
   head,
