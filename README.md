@@ -43,4 +43,4 @@ The following functions are currently implemented:
 * `middle(array)`: returns middle element of an array. middle two elements of even. empty array if two elements or less 
 * `tail(arr)`: creates new array exluding first element in original array
 * `takeUntil(array, callback)`: return elements in an array up to the point truthy condition is met.
-* `without(source, itemsToRemove)`: whateven elements that are in first array but not ins econd will get pushed into new array.
+* `without(source, itemsToRemove)`: whatever elements that are in first array but not in second will get pushed into new array.
