@@ -1,12 +1,12 @@
 /*
 to do:
 - implement function called letterPositions
-- step 1: define objecct structure to return
+- step 1: define object structure to return
 - step 2: write a test
   - copy in assertArraysEqual and eqArrays function into file
 - step 3: implement the function
   - implement the logic of the function
-- push work and mark activity compelete
+- push work and mark activity complete
 */
 
 const letterPositions = function(sentence) { //create letterPositions function

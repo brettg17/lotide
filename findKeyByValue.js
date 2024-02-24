@@ -1,7 +1,7 @@
 /*
 To do: 
 Import asserEqual function for testing
-create assertEqual function
+create findKeyByValue function
 take value and compare it to key
 if a match: Assertion Passed
 if value not in object: return undefined
